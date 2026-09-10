@@ -1,0 +1,88 @@
+ <!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1><i class="fas fa-heartbeat"></i> Heart Disease Prediction</h1>
+            <form id="heartForm">
+               <!-- </form>-- same inputs as before --> 
+                 <div class="input-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="sex">Sex</label>
+                    <select id="sex" name="sex" required>
+                        <option value="">Select</option>
+                        <option value="0">Female</option>
+                        <option value="1">Male</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="cp">Chest Pain Type</label>
+                    <input type="number" id="cp" name="cp" min="0" max="3" placeholder="0-3" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="trestbps">Resting Blood Pressure</label>
+                    <input type="number" id="trestbps" name="trestbps" placeholder="mm Hg" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="chol">Cholesterol</label>
+                    <input type="number" id="chol" name="chol" placeholder="mg/dl" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fbs">Fasting Blood Sugar > 120 mg/dl</label>
+                    <select id="fbs" name="fbs" required>
+                        <option value="">Select</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="restecg">Resting ECG</label>
+                    <input type="number" id="restecg" name="restecg" min="0" max="2" placeholder="0-2" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="thalach">Max Heart Rate Achieved</label>
+                    <input type="number" id="thalach" name="thalach" placeholder="Enter value" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="exang">Exercise Induced Angina</label>
+                    <select id="exang" name="exang" required>
+                        <option value="">Select</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+
+                <button type="submit">Predict <i class="fas fa-arrow-right"></i></button>
+            </form>
+
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
+
+
+
+
+
